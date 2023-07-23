@@ -8,7 +8,7 @@ class AuthNaviBar(BasePage):
         return [x.text for x in all_list]
 
 class PageRegistr(BasePage):
-    """Страница регистрации"""
+    """Страница регистрации с наличием элементов"""
     def check_page_registr(self):
         page_reg = self.find_elements(RostelecomAuthorizationLocators.LOCATOR_PAGE_REGISTR)
         return [r.text for r in page_reg]
