@@ -33,6 +33,7 @@ class RostelecomAuthorizationLocators:
 
 class AuthoUsers(BasePage):
     def input_username(self, name):
+        """ Ввод символов в поле для ввода логина"""
         search_username = self.find_element(RostelecomAuthorizationLocators.LOCATOR_USERNAME)
         search_username.click()
         search_username.clear()
@@ -40,6 +41,7 @@ class AuthoUsers(BasePage):
         return search_username
 
     def input_password(self, password):
+        """ Ввод символов в поле для ввода пароля"""
         input_pass = self.find_element(RostelecomAuthorizationLocators.LOCATOR_PASSWORD)
         input_pass.click()
         input_pass.clear()
@@ -47,12 +49,15 @@ class AuthoUsers(BasePage):
         return input_pass
 
     def button_auth_user(self):
+        """ Нажатие на кнопку 'Войти'"""
         return self.find_element(RostelecomAuthorizationLocators.LOCATOR_BUTTON_INPUT, time=2).click()
 
     def logout(self):
+        """ Нажатие на кнопку 'Выйти' из аккаунта"""
         return self.find_element(RostelecomAuthorizationLocators.LOCATOR_LOGOUT, time=2).click()
 
     def input_mobil_phone(self, numb):
+        """ Ввод символов в поле для ввода мобильного телефона """
         input_numb = self.find_element(RostelecomAuthorizationLocators.LOCATOR_TAB_PHONE)
         input_numb.click()
         input_numb.clear()
@@ -60,38 +65,13 @@ class AuthoUsers(BasePage):
         return input_numb
 
     def input_page_registr(self):
+        """ Нажатие на кнопку 'Зарегистрироваться' """
         return self.find_element(RostelecomAuthorizationLocators.LOCATOR_REGISTR, time=5).click()
 
     def page_user_agreement(self):
+        """ Кнопка перехода на страницу 'Пользовательское соглашение' """
         return self.find_element(RostelecomAuthorizationLocators.LOCATOR_USER_AGREEMENT, time=5).click()
 
     def forgot_password(self):
+        """ Кнопка перехода на страницу 'Забыл пароль' """
         return self.find_element(RostelecomAuthorizationLocators.LOCATOR_FORGOT_PASSWORD, time=5).click()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
